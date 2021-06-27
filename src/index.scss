@@ -1,0 +1,103 @@
+// global  Styling
+
+$primaryColor:#023232;
+$secondaryColor: hsl(212, 59%, 61%);
+$transition: all 0.3s linear;
+$textColor: #222;
+$primaryWhite: #fff;
+$darkShadow : 48px 48px 25px rgba(0, 0, 0, 0.4);
+$lightShadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $primaryColor;
+
+  main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    section {
+      width: 45rem;
+      background-color: #fff;
+      padding: 3rem 2.5rem;
+      border-radius: 0.6rem;
+      box-shadow: $darkShadow;
+      flex-basis: 1;
+      transition: $transition;
+
+      h3 {
+        font-size: 2.5rem;
+        line-height: 1.25;
+        letter-spacing: 0.12rem;
+        margin-bottom: 2rem;
+        color: #222;
+        text-align: left;
+      }
+
+      article {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+        margin-bottom: 2rem;
+        align-items: center;
+
+        img {
+          width: 7rem;
+          height: 7rem;
+          object-fit: cover;
+          border-radius: 50%;
+          box-shadow: $lightShadow;
+        }
+
+        h4 {
+          margin-bottom: 0.5rem;
+          font-size: 1.5rem;
+          text-transform: capitalize;
+          line-height: 1.25;
+          letter-spacing: 0.05rem;
+          margin-bottom: 1rem;
+          color: $textColor;
+        }
+
+        p {
+          color: $textColor;
+        }
+      }
+
+      button {
+        color: #fff;
+        display: block;
+        width: 100%;
+        background-color: $primaryColor;
+        outline: none;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        letter-spacing: 0.12rem;
+        font-size: 1.5rem;
+        margin: 2rem auto 0 auto;
+        text-transform: capitalize;
+        padding: 1.2rem 0;
+        box-shadow: 0 13px 14px rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+
+}
